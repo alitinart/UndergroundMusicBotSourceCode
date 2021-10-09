@@ -484,7 +484,16 @@ async def userinfo(ctx, *, user: discord.User = None):
 
 @bot.event
 async def on_ready():
+  print('----------------------')
   print('Logged in as:\n{0.user.name}\n{0.user.id}'.format(bot))
+  print('----------------------')
+  print('Number of servers bot is in:')
+  print(len(bot.guilds))
+  print('----------------------')
+  print('Servers bot is in:')
+  for i in range(len(bot.guilds)):
+    print(bot.guilds[i].name)
+  print('----------------------')
   await bot.change_presence(activity=discord.Game(name="-help   | Underground Music |"))
 
 keep_alive()
