@@ -483,7 +483,7 @@ async def userinfo(ctx, *, user: discord.User = None):
     await ctx.send(embed=embed)
 
 @bot.event
-async def on_ready():
+async def on_ready():('-------------------------------------------------------------------------------------')
   print("""                                      (((((                                     
                           (((((((((((((((((((((((((((((                         
                      (((((((((((((((((((((((((((((((((((((((                    
